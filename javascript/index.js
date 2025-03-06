@@ -31,8 +31,5 @@ document.querySelectorAll("p").forEach((p) => {
     }
   });
 
-
-  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  if (isSafari) {
-      document.body.classList.add('safari');
-  }
+  document.getElementById('one').textContent = "+90 531 284 34 19";
+  document.getElementById('two').textContent = "+90 535 961 77 58";

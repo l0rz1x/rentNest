@@ -82,8 +82,9 @@ a{
     margin-top: 150px;
 }
 .slider{
+    display: flex;
     position: relative;
-    width: 80%;
+    width: 40vw;
     max-width: 52.659vw;
     max-height: 82vh;
     margin: auto;
@@ -95,11 +96,21 @@ a{
 }
 .slides{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #ddd;
   transition: transform 0.5s ease-in-out;
 }
 .slides img{
   width: 100%;
   height: 100%;
+  object-fit: contain;
+}
+.slides video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .slide {
   display: none; 
@@ -188,10 +199,17 @@ a{
 }
 
 
+.tapFor{
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
 
 h1 , p{
     display: inline;
-    
+    font-size: 27px;
 }
 p{
     font-size: 20px;
@@ -267,7 +285,10 @@ p{
 .first{
   height: 30px;
 }
-.first > .pNumber{
+.first > a {
+  display: inline-block;
+}
+.first > a > .pNumber{
 display: inline-block;
 font-size: 1.646vw;
 margin: 0;
@@ -356,8 +377,14 @@ margin: 0.658vw;
     width: 100vw;
     padding: 0;
 }
+.tapFor{
+  margin-right: 3vw;
+}
 .slider{
     width: 80vw;
+}
+.slider button{
+  font-size: 3.5vw;
 }
 .slides{
   width: 80vw;
@@ -374,10 +401,10 @@ margin: 0.658vw;
   right: 0vw; 
 }
 .modal-content{
-  margin-top: 12vh;
+  margin-top: 8vh;
 }
   .description{
-    width: 70vw;
+    width: 90vw;
   }
   .footer{
     grid-template-columns: repeat(2, 1fr);
@@ -389,7 +416,7 @@ margin: 0.658vw;
     left: 5vw;
   }
   .socialMedia{
-    width: 200px;
+    width: 160px;
     height: 160px;
     left: 5vw;
   }
@@ -399,12 +426,11 @@ margin: 0.658vw;
   .first{
     height: 35px;
   }
-  .first > .pNumber{
+  .first > a > .pNumber{
     font-size: 3.5vw;
+    font-family: Arial, Helvetica, sans-serif;
   }
-  .safari .pNumber{
-    font-size: 3.5vw;
-  }
+  
   .second{
     height: 35px;
   }
